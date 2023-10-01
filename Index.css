@@ -1,0 +1,657 @@
+@import url("https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800,900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  background-color: #000;
+  min-height: 200vh;
+}
+
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: 0.6s;
+  padding: 40px 40px;
+  z-index: 100000;
+}
+
+header.sticky {
+  padding: 5px 70px;
+  background: black;
+}
+
+header .logo {
+  position: relative;
+  font-weight: 700;
+  color: #d1d1d1;
+  text-decoration: none;
+  font-size: 2em;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  transition: 0.6s;
+  border-bottom: 2px solid #d1d1d1;
+  border-top: 2px solid #d1d1d1;
+}
+
+header .logo:hover {
+  color: #d5074d;
+  border-bottom: 2px solid #d5074d;
+  border-top: 2px solid #d5074d;
+}
+
+header ul {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+header ul li {
+  position: relative;
+  list-style: none;
+}
+
+header ul li a {
+  position: relative;
+  margin: 0 15px;
+  text-decoration: none;
+  color: #fff;
+  letter-spacing: 2px;
+  font-weight: 500px;
+  transition: 0.6s;
+}
+
+header ul li a:hover {
+  color: #d5074d;
+}
+
+.banner {
+  position: relative;
+  width: 100%;
+
+  background-size: cover;
+}
+
+header.sticky .logo,
+header.sticky ul li a {
+  color: white;
+  border: none;
+}
+
+header.sticky .logo:hover {
+  color: #d5074d;
+}
+
+header.sticky .logo {
+  color: #d1d1d1;
+}
+
+header.sticky ul li a:hover {
+  color: #d5074d;
+}
+
+.container {
+  position: relative;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 607px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  border-bottom: 2px solid #d5074d;
+}
+
+.container::before {
+  content: "";
+  /* background-image: url("C:\\JavaScript Project\\All Images\\ezgif.com-webp-to-jpg.jpg"); */
+  background-repeat: no-repeat;
+  animation: animate 30s ease-in-out infinite;
+
+  background-size: cover;
+  background-position: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  opacity: 0.4;
+}
+
+.outer {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 400px;
+}
+
+@keyframes animate {
+
+  0%,
+  100% {
+    background-image: url("ezgif.com-webp-to-jpg.jpg");
+    background-size: 100% 640px;
+  }
+
+  25% {
+    background-image: url("Dodgeball.jpg ");
+    background-size: 100% 640px;
+  }
+
+  50% {
+    background-image: url("Sepak3.jpeg");
+    background-size: 100% 640px;
+  }
+
+  75% {
+    background-image: url("TennisBall cricket.jpg");
+    background-size: 100% 640px;
+  }
+}
+
+.banner .container .outer .details {
+  text-align: left;
+  width: 100%;
+  height: 200px;
+  margin-top: 100px;
+  font-size: 30px;
+
+  color: white;
+}
+
+.icon-container {
+  position: relative;
+}
+
+.icon {
+  width: 50px;
+  height: 50px;
+  position: absolute;
+  top: 0;
+  animation: bounce 1s ease-in-out infinite alternate;
+  font-size: 35px;
+  color: rgb(255, 255, 255);
+  margin-top: 540px;
+  margin-left: 50%;
+}
+
+@keyframes bounce {
+  0% {
+    top: 0;
+  }
+
+  100% {
+    top: 50px;
+    /* Adjust the distance you want the icon to move */
+  }
+}
+
+/* Media quary for Responsive web site  */
+
+@media (max-width: 750px) {
+
+  /* header ul li {
+display: none;
+} */
+  /* This is the media tag wuary for navi gation bar  */
+  header ul {
+    display: block;
+    color: white;
+    position: relative;
+    padding: 0;
+    margin: 0;
+  }
+
+  header ul li a {
+    display: none;
+  }
+
+  #maniIcon {
+    display: block;
+  }
+}
+
+header ul li a span.material-symbols-outlined {
+  font-size: 34px;
+  margin: 0;
+  padding: 0;
+  display: none;
+}
+
+.sidenav {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #111;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 60px;
+}
+
+.sidenav a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  font-family: "Aboreto", cursive;
+  font-family: "Akronim", cursive;
+  font-family: "Arapey", serif;
+  font-family: "Slabo 27px", serif;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
+}
+
+#navigationStyle {
+  border-bottom: 1px solid #fff;
+  padding: 20px;
+}
+
+#navigationStyle:hover {
+  background-color: #2a2828;
+  font-size: 30px;
+  border-bottom: 1px solid #d5074d;
+}
+
+.sidenav a:hover {
+  color: #f1f1f1;
+}
+
+.sidenav .closebtn {
+  position: absolute;
+  top: 0;
+  /* right: 25px; */
+  font-size: 36px;
+  margin-left: 180px;
+}
+
+@media screen and (max-height: 450px) {
+  .sidenav {
+    padding-top: 15px;
+  }
+
+  .sidenav a {
+    font-size: 18px;
+  }
+}
+
+#NavigationBarDeopudown {
+  display: none;
+}
+
+@media (max-width: 750px) {
+  #NavigationBarDeopudown {
+    display: block;
+  }
+}
+
+/* padding: 40px 40px; */
+
+@media (max-width: 750px) {
+  header {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+
+  header.sticky {
+    padding-left: 10px;
+    padding-right: 20px;
+  }
+
+  header .logo {
+    font-size: 20px;
+  }
+}
+
+#HeadingFirst {
+  margin-left: 40px;
+  margin-top: 150px;
+  font-family: "Aboreto", cursive;
+  font-family: "Akronim", cursive;
+  font-family: "Arapey", serif;
+  text-align: center;
+  font-size: 100px;
+}
+
+#MKV {
+  font-family: "Aboreto", cursive;
+  font-family: "Akronim", cursive;
+  font-family: "Arapey", serif;
+}
+
+#SA {
+  font-size: 40%;
+  margin-left: -30px;
+}
+
+#details {
+  color: white;
+  padding-left: 40px;
+  font-size: 20px;
+  padding-top: 20px;
+  text-align: center;
+  transition: 2s;
+}
+
+#details:hover {
+  font-size: 25px;
+  transition: 2s;
+  color: aquamarine;
+}
+
+@media (max-width: 750px) {
+  #SA {
+    font-size: 35%;
+  }
+
+  #HeadingFirst {
+    margin-left: 10px;
+    margin-top: 150px;
+    font-size: 70px;
+  }
+
+  #details {
+    padding-left: 10px;
+    font-size: 20px;
+    text-align: center;
+  }
+
+  .container {
+    height: 700px;
+  }
+
+  @keyframes animate {
+
+    0%,
+    100% {
+      background-image: url("C:\\JavaScript Project\\All Images\\ezgif.com-webp-to-jpg.jpg");
+      background-size: 100% 700px;
+    }
+
+    25% {
+      background-image: url("C:\\JavaScript Project\\All Images\\Dodgeball.jpg ");
+      background-size: 100% 700px;
+    }
+
+    50% {
+      background-image: url("C:\\JavaScript Project\\All Images\\Sepak3.jpeg");
+      background-size: 100% 700px;
+    }
+
+    75% {
+      background-image: url("C:\\JavaScript Project\\All Images\\TennisBall cricket.jpg");
+      background-size: 100% 700px;
+    }
+  }
+
+  .icon {
+    margin-top: 600px;
+  }
+}
+
+.animationtext {
+  text-transform: uppercase;
+  background-image: linear-gradient(-225deg,
+      #ffffff 0%,
+      #95909b 29%,
+      #d5074d 67%,
+      #fff800 100%);
+  background-size: auto auto;
+  background-clip: border-box;
+  background-size: 200% auto;
+  color: #fff;
+  background-clip: text;
+  /* text-fill-color: transparent; */
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: textclip 2s linear infinite;
+  /* display: inline-block; */
+  font-size: 150px;
+}
+
+@keyframes textclip {
+  to {
+    background-position: 200% center;
+  }
+}
+
+@media (max-width: 750px) {
+  .animationtext {
+    font-size: 80px;
+  }
+
+  .SA {
+    font-size: 40%;
+  }
+}
+
+.SA {
+  /* text-transform: uppercase; */
+  background-image: linear-gradient(-225deg,
+      #ffffff 0%,
+      #95909b 29%,
+      #d5074d 67%,
+      #fff800 100%);
+  background-size: auto auto;
+  background-clip: border-box;
+  background-size: 200% auto;
+  color: #fff;
+  background-clip: text;
+  /* text-fill-color: transparent; */
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: textclip2 2s linear infinite;
+  /* display: inline-block; */
+  font-size: 140px;
+}
+
+@keyframes textclip2 {
+  to {
+    background-position: 200% center;
+  }
+}
+
+@media (max-width: 750px) {
+  .animationtext {
+    font-size: 80px;
+  }
+
+  #SA {
+    margin-left: -10px;
+  }
+}
+
+/*  This is the background of div block  */
+
+.background {
+  min-height: 100vh;
+  display: flex;
+  /* justify-content: center; */
+  /* align-items: center; */
+  position: relative;
+  background-color: #181827;
+  background-image: url("C:\\JavaScript Project\\All Images\\who-we-are.jpg");
+  content: "";
+  background-repeat: no-repeat;
+  background-size: cover;
+  /* background-position: center; */
+}
+
+@media (max-width: 750px) {
+  .background::before {
+    display: none;
+  }
+
+  .background {
+    /* display: none; */
+    background-color: #181827;
+    width: 100%;
+  }
+}
+
+/* This is position of background on text */
+
+.we-are-the-mkv-sport {
+  position: relative;
+  color: white;
+}
+
+.we-are-the-mkv-sport-h1 {
+  font-family: "Aboreto", cursive;
+  font-family: "Akronim", cursive;
+  font-family: "Arapey", serif;
+  font-family: "Montserrat", sans-serif;
+  font-family: "Rajdhani", sans-serif;
+  font-family: "Roboto", sans-serif;
+  font-family: "Slabo 27px", serif;
+  font-size: 3rem;
+  font-weight: 100;
+  width: 350px;
+  margin-left: 280px;
+  margin-top: 100px;
+  letter-spacing: 5px;
+  /* text-align:center; */
+  border-bottom: 2px solid #d5074d;
+}
+
+@media (max-width: 750px) {
+  .we-are-the-mkv-sport-h1 {
+    font-family: "Aboreto", cursive;
+    font-family: "Akronim", cursive;
+    font-family: "Arapey", serif;
+    font-family: "Montserrat", sans-serif;
+    font-family: "Rajdhani", sans-serif;
+    font-family: "Roboto", sans-serif;
+    font-family: "Slabo 27px", serif;
+    font-size: 42px;
+    margin-left: 30px;
+    width: 310px;
+    margin-top: 50px;
+
+    /* text-align: center; */
+    border-bottom: 2px solid #d5074d;
+  }
+
+  .we-are-the-mkv-sport {
+    width: 100%;
+  }
+
+  #details {
+    margin-top: 70px;
+  }
+}
+
+.animationtext2 {
+  text-transform: uppercase;
+  background-image: linear-gradient(-225deg,
+      #bc0a0a 0%,
+      #c64f42 29%,
+      #13aa9d 67%,
+      #2ee02e 100%);
+  background-size: auto auto;
+  background-clip: border-box;
+  background-size: 200% auto;
+  color: #fff;
+  background-clip: text;
+  /* text-fill-color: transparent; */
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: textclip 2s linear infinite;
+  /* display: inline-block; */
+  font-size: 150px;
+}
+
+#MKV2 {
+  font-family: "Aboreto", cursive;
+  font-family: "Akronim", cursive;
+  font-family: "Arapey", serif;
+  font-size: 50px;
+  /* font-weight: 1000; */
+  font-weight: 1000;
+}
+
+.animationtext:hover {
+  background-image: linear-gradient(-225deg,
+      #ffffff 0%,
+      #000000 29%,
+      #01ff73 67%,
+      #ff9900 100%);
+}
+
+
+.SA:hover {
+  background-image: linear-gradient(-225deg,
+      #ff0000 0%,
+      #000000 29%,
+      #01ff73 67%,
+      #ff9900 100%);
+}
+
+
+.contentOfWeAreTheMKVSport {
+  margin-left: 280px;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  font-size: 14px;
+  color: #b0b9c1;
+}
+
+.contentOfWeAreTheMKVSport .p1 {
+  margin-top: 60px;
+  margin-bottom: 60px;
+  width: 550px;
+  font-size: 14px;
+
+}
+
+.contentOfWeAreTheMKVSport .p2 {
+  margin-top: 60px;
+  margin-bottom: 60px;
+  width: 550px;
+  font-size: 14px;
+}
+
+.contentOfWeAreTheMKVSport .p3 {
+  margin-top: 60px;
+  margin-bottom: 60px;
+  width: 550px;
+  font-size: 14px;
+}
+
+@media (max-width: 750px) {
+  .contentOfWeAreTheMKVSport {
+    margin-left: 30px;
+  }
+
+  .contentOfWeAreTheMKVSport .p1 {
+    width: 340px;
+    margin-top: 40px;
+    margin-bottom: 40px;
+    font-size: 16px;
+  }
+
+  .contentOfWeAreTheMKVSport .p2 {
+    width: 340px;
+    margin-top: 40px;
+    margin-bottom: 40px;
+    font-size: 16px;
+  }
+
+  .contentOfWeAreTheMKVSport .p3 {
+    width: 340px;
+    margin-top: 40px;
+    margin-bottom: 40px;
+    font-size: 16px;
+  }
+}
